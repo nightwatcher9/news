@@ -33,7 +33,7 @@ class UserFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
+  // 三大点击事件 修改密码，退出登录，更改个人信息
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.refresh()
@@ -51,6 +51,7 @@ class UserFragment : Fragment() {
         binding.changeinformation.setOnClickListener {
             var intent = Intent()
             intent.setClass(NewsApplication.context,ChangeInformation::class.java)
+            startActivity(intent)
         }
 
     }

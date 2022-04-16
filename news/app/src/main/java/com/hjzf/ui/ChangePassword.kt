@@ -17,14 +17,18 @@ class ChangePassword : AppCompatActivity(){
 
 
         super.onCreate(savedInstanceState)
-        /*
+
         setContentView(R.layout.change_password)
         val originpassword = findViewById<TextView>(R.id.originalPassword)
         val newpassword_1 = findViewById<TextView>(R.id.newPassword1)
         val newpassword_2 = findViewById<TextView>(R.id.newPassword2)
         val button = findViewById<Button>(R.id.ok)
-        var  imageview = findViewById<ImageView>(R.id.hidePassword)
-        var  tv = findViewById<TextView>(R.id.originalPassword)
+        var  imageview1 = findViewById<ImageView>(R.id.hidePassword0)
+        var  imageview2 = findViewById<ImageView>(R.id.hidePassword1)
+        var  imageview3 = findViewById<ImageView>(R.id.hidePassword2)
+        var  tv1 = findViewById<TextView>(R.id.originalPassword)
+        var  tv2 = findViewById<TextView>(R.id.newPassword1)
+        var  tv3 = findViewById<TextView>(R.id.newPassword2)
 
 
         val sqlite = Sqlite(this,"news_db",1)
@@ -32,12 +36,16 @@ class ChangePassword : AppCompatActivity(){
         var newpassword = "test"
         var password = "test"
         var i = 1
+        var j = 1
+        var k = 1
         var mydb = sqlite.writableDatabase
-
+/*
         val cursor  =  mydb.rawQuery("select * from User where UserID =?", arrayOf(id))
         if(cursor.moveToFirst()){
             password = cursor.getString(cursor.getColumnIndex("Password"))
         }
+
+ */
         button.setOnClickListener {
                  if (originpassword.text.toString().equals(password)&&newpassword_1.text.toString().equals(newpassword_2.text.toString())){
                      newpassword=newpassword_1.text.toString()
@@ -54,24 +62,50 @@ class ChangePassword : AppCompatActivity(){
                         Toast.makeText(this@ChangePassword, "两次密码不相同！", Toast.LENGTH_SHORT).show()
                  }
         }
-        imageview.setOnClickListener {
+
+
+        //隐藏密码，可选隐藏密码或者显示密码，两个状态，避免密码泄露
+        imageview1.setOnClickListener {
             if (i%2!=0){
-                imageview.setColorFilter(Color.BLUE)
-                tv.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD)
+                imageview1.setColorFilter(Color.BLUE)
+                tv1.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD)
             }
             else{
-                imageview.setColorFilter(Color.GRAY)
-                tv.setInputType(InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD)
+                imageview1.setColorFilter(Color.GRAY)
+                tv1.setInputType(InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD)
             }
             i++
 
+        }
+        imageview2.setOnClickListener {
+            if (j%2!=0){
+                imageview2.setColorFilter(Color.BLUE)
+                tv2.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD)
+            }
+            else{
+                imageview2.setColorFilter(Color.GRAY)
+                tv2.setInputType(InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD)
+            }
+            j++
+
+        }
+        imageview3.setOnClickListener {
+            if (k%2!=0){
+                imageview3.setColorFilter(Color.BLUE)
+                tv3.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD)
+            }
+            else{
+                imageview3.setColorFilter(Color.GRAY)
+                tv3.setInputType(InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD)
+            }
+            k++
         }
 
 
 
 
 
-*/
+
     }
 
 
