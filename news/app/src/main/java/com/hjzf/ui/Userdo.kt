@@ -13,7 +13,7 @@ class Userdo : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_user)
-        /*
+
         val quit = findViewById<Button>(R.id.quit)
         val changepassword = findViewById<Button>(R.id.changePassword)
         val changeinformation = findViewById<Button>(R.id.changeinformation)
@@ -29,6 +29,6 @@ class Userdo : AppCompatActivity(){
             val intent = Intent(this,ChangeInformation::class.java)
             startActivity(intent)
         }
-*/
+
     }
 }

@@ -1,12 +1,18 @@
 package com.hjzf.ui.user
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.app.ui.activity.ChangeInformation
+import com.app.ui.activity.ChangePassword
+import com.app.ui.activity.Userdo
+import com.hjzf.NewsApplication
 import com.hjzf.databinding.FragmentUserBinding
+import com.hjzf.ui.MainActivity
 
 class UserFragment : Fragment() {
 
@@ -31,19 +37,24 @@ class UserFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.refresh()
-        binding.testBtn.setOnClickListener { viewModel.refresh() }
-        viewModel.logs.observe(viewLifecycleOwner) {
-            val table = binding.apiTable
-            // 刷新到界面上
-            table.tableData?.clear() // 清空之前的数据
-            table.config.minTableWidth = getScreenWidth() // 表格宽度为撑满屏幕
-            table.setData(it) // 将新数据放进去
+        binding.quit.setOnClickListener {
+            var intent = Intent()
+            intent.setClass(NewsApplication.context, MainActivity::class.java)
+            startActivity(intent)
+
         }
+        binding.changePassword.setOnClickListener {
+            var intent = Intent()
+            intent.setClass(NewsApplication.context, ChangePassword::class.java)
+            startActivity(intent)
+        }
+        binding.changeinformation.setOnClickListener {
+            var intent = Intent()
+            intent.setClass(NewsApplication.context,ChangeInformation::class.java)
+        }
+
     }
 
-    private fun getScreenWidth(): Int {
-        val metrics = resources.displayMetrics
-        return metrics.widthPixels
-    }
+
 
 }

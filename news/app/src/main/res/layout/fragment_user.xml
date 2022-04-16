@@ -35,23 +35,94 @@
     </com.google.android.material.appbar.AppBarLayout>
 
 
-    <LinearLayout
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="100dp"
+        android:src="@drawable/news_image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/studentName"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="30dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:text="姓名:"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/photo" />
 
-        <com.bin.david.form.core.SmartTable
-            android:layout_gravity="center_horizontal"
-            android:id="@+id/api_table"
-            android:layout_width="match_parent"
-            android:layout_height="350dp" />
+    <TextView
+        android:layout_marginLeft="70dp"
+        android:id="@+id/studentId"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="邮箱："
+        android:textSize="20dp"
+        android:gravity="center_vertical"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/studentName"
+        android:layout_marginTop="20dp" />
 
-        <Button
-            android:id="@+id/test_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="点击刷新今天向聚合数据发送网络请求的次数"
-            app:backgroundTint="#40C4FF" />
-    </LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="70dp"
+        android:id="@+id/netFee"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="住址："
+        android:textSize="20dp"
+        android:gravity="center_vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/studentId"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/changeinformation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/selector_function_button"
+        app:layout_constraintBottom_toTopOf="@+id/quit"
+        android:text="更改个人信息"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/changePassword"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/selector_function_button"
+        app:layout_constraintBottom_toTopOf="@+id/quit"
+        android:text="更改密码"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/quit"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/selector_function_button"
+        app:layout_constraintBottom_toTopOf="@+id/navigationBar"
+        android:text="退出登录"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"/>
 
 </LinearLayout>

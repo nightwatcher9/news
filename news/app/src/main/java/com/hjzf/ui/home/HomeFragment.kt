@@ -16,6 +16,7 @@ import com.hjzf.R
 import com.hjzf.databinding.FragmentHomeBinding
 import com.hjzf.ui.news.NewsFragment
 import com.hjzf.ui.search.SearchActivity
+import com.hjzf.ui.user.UserFragment
 import com.hjzf.util.LogUtil
 import com.hjzf.util.showToast
 
