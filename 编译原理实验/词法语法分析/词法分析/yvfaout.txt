@@ -1,0 +1,3 @@
+<program>
+    <declaration_list>
+    <main_declaration>

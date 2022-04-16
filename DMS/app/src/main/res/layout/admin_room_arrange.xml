@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBackground">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="宿舍管理"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/roomIn"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selector_function_button"
+        android:drawableLeft="@drawable/ic_notice"
+        android:drawableRight="@drawable/ic_enter"
+        android:drawablePadding="17dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="17dp"
+        android:stateListAnimator="@null"
+        android:text="宿舍入住"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/roomOut"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selector_function_button"
+        android:drawableLeft="@drawable/ic_leave"
+        android:drawableRight="@drawable/ic_enter"
+        android:drawablePadding="20dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:stateListAnimator="@null"
+        android:text="宿舍退出"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/roomIn" />
+
+    <Button
+        android:id="@+id/roomExchange"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selector_function_button"
+        android:drawableLeft="@drawable/ic_leave"
+        android:drawableRight="@drawable/ic_enter"
+        android:drawablePadding="20dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:stateListAnimator="@null"
+        android:text="宿舍交换"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/roomOut" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <Button
+            android:id="@+id/home"
+            android:paddingTop="7dp"
+            android:drawableTop="@drawable/ic_home_unselected"
+            android:text="首页"
+            android:gravity="center"
+            android:background="@drawable/selector_navigation_bar_button"
+            android:stateListAnimator="@null"
+            android:backgroundTint="@color/colorWhite"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/roomArrange"
+            android:layout_gravity="center"
+            android:text="宿舍管理"
+            android:background="@drawable/selector_navigation_bar_button"
+            android:stateListAnimator="@null"
+            android:backgroundTint="@color/colorWhite"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/other"
+            android:paddingTop="7dp"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/ic_other_unselected"
+            android:text="其他"
+            android:background="@drawable/selector_navigation_bar_button"
+            android:stateListAnimator="@null"
+            android:backgroundTint="@color/colorWhite"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/my"
+            android:paddingTop="7dp"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/ic_user_unselected"
+            android:text="我"
+            android:background="@drawable/selector_navigation_bar_button"
+            android:stateListAnimator="@null"
+            android:backgroundTint="@color/colorWhite"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
